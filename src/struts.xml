@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name = "action" extends = "struts-default" >
+		<action name="register" class= "action.Login" method="register">
+			<result name="success">geRenZhongXin.jsp</result>
+			<result name ="login">register.jsp</result>
+		</action>
+		<action name="login" class= "action.Login" method="login">
+			<result name="success">geRenZhongXin.jsp</result>
+			<result name ="login">login.jsp</result>
+		</action>
+		<action name="Sell" class= "action.Sell" method="sell">
+			<result name="success">showProduct.jsp</result>
+			<result name ="sell">sell.jsp</result>
+		</action>
+		<action name="UpdateProduct" class= "action.Sell" method="update">
+			<result name="success">showProduct.jsp</result>
+			<result name ="sell">sell.jsp</result>
+		</action>
+		<action name="DeleteProduct" class= "action.Sell" method="delete">
+			<result name="success">showProduct.jsp</result>
+			<result name ="sell">showSellOrder.jsp</result>
+		</action>
+		<action name="Buy" class= "action.Buy" method="buy">
+			<result name="success">showBuyOrder.jsp</result>
+			<result name ="fail">sell.jsp</result>
+		</action>
+		<action name="sendMessages" class="action.Server" method="sendMessages">
+			<result name="success">content.jsp</result>
+		</action>
+		<action name="getMessages" class="action.Server" method="getMessages">
+			<result name="success">content.jsp</result>
+		</action>
+		<action name="KsendMessages" class="action.KServer" method="sendMessages">
+			<result name="success">content.jsp</result>
+		</action>
+		<action name="KgetMessages" class="action.KServer" method="getMessages">
+			<result name="success">content.jsp</result>
+		</action>
+		<action name="leave" class="action.Server" method="leave">
+			<result name="success">index.jsp</result>
+		</action>
+	</package>
+	
+</struts>
